@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dfipc6bujphqd"]
+
+[ext_resource type="Script" uid="uid://c6714wpb52c7j" path="res://scripts/components/movement_3d.gd" id="1_8afob"]
+
+[node name="Player" type="Node3D" unique_id=641308709]
+
+[node name="Movement3D" type="Node3D" parent="." unique_id=1297622877]
+script = ExtResource("1_8afob")
+metadata/_custom_type_script = "uid://c6714wpb52c7j"
