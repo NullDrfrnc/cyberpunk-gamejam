@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dfipc6bujphqd"]
+
+[ext_resource type="Script" uid="uid://c6714wpb52c7j" path="res://components/player/movement_3d.gd" id="1_8afob"]
+[ext_resource type="Script" uid="uid://cegwava2im7fd" path="res://player/player_3d.gd" id="1_rkbax"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ikbki"]
+
+[node name="Player" type="CharacterBody3D" unique_id=2106769526]
+script = ExtResource("1_rkbax")
+metadata/_custom_type_script = "uid://cegwava2im7fd"
+
+[node name="components" type="Node3D" parent="." unique_id=898374773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Movement3D" type="Node3D" parent="components" unique_id=1297622877 node_paths=PackedStringArray("player", "head")]
+script = ExtResource("1_8afob")
+player = NodePath("../..")
+head = NodePath("../../Head")
+metadata/_custom_type_script = "uid://c6714wpb52c7j"
+
+[node name="CollisionBox" type="CollisionShape3D" parent="." unique_id=2052427321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ikbki")
+
+[node name="Head" type="Node3D" parent="." unique_id=384059691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=668230462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.450581e-09)
