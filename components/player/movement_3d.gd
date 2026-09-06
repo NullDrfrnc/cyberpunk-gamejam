@@ -10,7 +10,7 @@ class_name Movement3D extends Node3D
 
 @export var jump_force : float = 12.0
 
-@export var camera_sensitivity : float = 1
+@export var camera_sensitivity : float = 4
 # max up/down
 @export var camera_max_degrees : float = 99
 

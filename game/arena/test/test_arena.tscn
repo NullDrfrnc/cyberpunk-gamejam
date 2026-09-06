@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ch0w1h1stu4ys"]
+
+[ext_resource type="Script" uid="uid://blhla2ogkxr2n" path="res://game/arena/arena.gd" id="1_y6b81"]
+[ext_resource type="Texture2D" uid="uid://ch0uuav1nys3p" path="res://icon.svg" id="2_c0ffm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y6b81"]
+albedo_texture = ExtResource("2_c0ffm")
+uv1_scale = Vector3(1.075, 1.075, 1.075)
+uv1_triplanar = true
+
+[node name="testArena" type="Node3D" unique_id=828778178 node_paths=PackedStringArray("player_start_pos")]
+script = ExtResource("1_y6b81")
+player_start_pos = NodePath("Marker3D")
+metadata/_custom_type_script = "uid://blhla2ogkxr2n"
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1872671941]
+use_collision = true
+size = Vector3(45, 1, 45)
+material = SubResource("StandardMaterial3D_y6b81")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=2129464810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

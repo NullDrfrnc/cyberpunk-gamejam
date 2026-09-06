@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://7nco7vgyskoo"]
+
+[ext_resource type="Script" uid="uid://blhla2ogkxr2n" path="res://game/arena/arena.gd" id="1_48cds"]
+
+[node name="stage" type="Node3D" unique_id=143521218 node_paths=PackedStringArray("player_start_pos")]
+script = ExtResource("1_48cds")
+player_start_pos = NodePath("Marker3D")
+metadata/_custom_type_script = "uid://blhla2ogkxr2n"
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1613152835]
+use_collision = true
+radius = 16.403809
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="." unique_id=2116969134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -70.78613, 0)
+use_collision = true
+radius = 3.2895508
+height = 139.57227
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="." unique_id=309885888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 75, 0)
+inner_radius = 250.0
+outer_radius = 303.26263
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=2066991635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
