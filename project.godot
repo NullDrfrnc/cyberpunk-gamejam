@@ -36,6 +36,7 @@ folder_colors={
 "res://addons/": "pink",
 "res://assets/": "teal",
 "res://components/": "yellow",
+"res://enemy/": "gray",
 "res://globals/": "blue",
 "res://ui/": "orange",
 "res://world/": "red"
